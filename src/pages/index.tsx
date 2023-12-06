@@ -113,7 +113,7 @@ const Home: React.FC<iHomeProps> = ({ movies }) => {
 export default Home;
 
 export const getServerSideProps = async () => {
-  const api = process.env.API;
+  const api = process.env.NEXT_PUBLIC_API;
   const res = await axios.get(`${api}?watch=true`);
   const data = res.data;
   return { props: { movies: data } };
