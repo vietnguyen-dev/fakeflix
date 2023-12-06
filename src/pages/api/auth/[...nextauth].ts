@@ -11,5 +11,10 @@ export const authOptions = {
       }),
     // ...add more providers here
   ],
+  logger: {
+    error(code: any, message: any) {
+      console.error(code, message);
+    },
+  },
 }
 export default NextAuth(authOptions)
